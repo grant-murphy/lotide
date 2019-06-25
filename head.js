@@ -1,14 +1,14 @@
 // FUNCTION IMPLEMENTATION
 const assertEqual = function(actual, expected) {
-  if (actual !== expected) {
-    console.log('❌❌❌: ' + actual + ' !== ' + expected);
+  if (actual === expected) {
+    console.log(`✅✅✅: ${actual} === ${expected}`);
   } else {
-    console.log('✅✅✅: ' + actual + ' === ' + expected);
+    console.log(`❌❌❌: ${actual} !== ${expected}`);
   }
 };
 
-let head = function(value) {
-  console.log(value[0])
+const head = function(array) {
+  return array[0];
 }
 
 // TEST CODE
