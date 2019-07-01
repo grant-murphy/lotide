@@ -1,27 +1,30 @@
 // FUNCTION IMPLEMENTATION
 
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅: ${actual} === ${expected}`);
-  } else {
-    console.log(`❌❌❌: ${actual} !== ${expected}`);
-  }
-};
+// const assertEqual = function(actual, expected) {
+//   if (actual === expected) {
+//     console.log(`✅✅✅: ${actual} === ${expected}`);
+//   } else {
+//     console.log(`❌❌❌: ${actual} !== ${expected}`);
+//   }
+// };
 
 const countLetters = function(letterCount) {
   const results = {};
-  
-  for (const item of letterCount) {   
-    
-      if(results[item]) {
-        results[item] += 1;
-      } else {
-        results[item] = 1;
-      }
+  for (const item of letterCount) {
+    if (item == ' ') {
+      continue;
+    } else if (results[item]) {
+      results[item] += 1;
+    } else {
+      results[item] = 1;
     }
+    // console.log(results)
+  }
     
   return results;
-}
+};
 
 
-console.log(countLetters("lighthouse in the house"))
+module.exports = countLetters;
+
+// console.log(countLetters("lighthouse in the house"))
