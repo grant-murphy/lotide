@@ -15,4 +15,4 @@ const countLetters = function(letterCount) {
 
 module.exports = countLetters;
 
-// console.log(countLetters("lighthouse in the house"))
+console.log(countLetters("lighthouse in the house"))
