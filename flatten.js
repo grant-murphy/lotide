@@ -1,20 +1,19 @@
-
-
 const flatten = function(array) {
-var flattened=[];
-for (var i = 0; i < array.length; i++) {
-if(!Array.isArray(array[i])) {
-  flattened.push(array[i]) ;
-} else {
- for(var j = 0; j < array[i].length; j++) {
-  flattened.push(array[i][j]);
-  } 
+  let flattened = [];
+  for (let i = 0; i < array.length; i++) {
+    if (!Array.isArray(array[i])) {
+      flattened.push(array[i]);
+    } else {
+      for (let j = 0; j < array[i].length; j++) {
+        flattened.push(array[i][j]);
+      }
+    }
   }
- } 
- return flattened;
-}
+  return flattened;
+};
+
+module.exports = flatten;
 
 
-
-console.log(flatten([1, 2, [3, 4], 5, [6]])); // => [1, 2, 3, 4, 5, 6]
+// console.log(flatten([1, 2, [3, 4], 5, [6]])); // => [1, 2, 3, 4, 5, 6]
 
